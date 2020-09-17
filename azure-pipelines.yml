@@ -6,6 +6,7 @@
 trigger:
 - master
 
+
 variables:
   rootDir: 'diary-app'
   buildDir: '$(rootDir)/build'
