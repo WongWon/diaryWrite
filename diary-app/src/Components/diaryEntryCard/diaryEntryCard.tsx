@@ -29,7 +29,7 @@ const useStyles = makeStyles({
       maxWidth: 1200,
     },
     binButton: {
-        color: 'blue'
+        color: 'green'
     }
 
   });
