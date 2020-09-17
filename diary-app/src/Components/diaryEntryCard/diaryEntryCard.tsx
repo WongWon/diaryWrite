@@ -86,11 +86,11 @@ function DiaryEntryCard ({diaryEntry}) {
     }
     return(
         <div>
-            
             <Card className={classes.diaryCard} id="diaryCard">
                 <CardContent>
                     <h1 id="displayedTitle">{title}</h1>
                     <p id="displayedEntry">{entry}</p>
+   
                 </CardContent>
 
                 <CardActions>

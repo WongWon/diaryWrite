@@ -13,6 +13,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 
 import DiaryEntryCard from './Components/diaryEntryCard/diaryEntryCard';
+import Footer from './Components/Footer/Footer'
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -74,9 +75,10 @@ function App() {
 
   return (
     <div className="App">
+      
       <AppBar position="static" className={classes.topBar} id="topBar">
         <ToolBar>
-          <img src={logo} id="logo"></img>
+          <img src={logo} id="logo" alt = "Diary Write Logo"></img>
           <Typography variant="h2" id="companyName">
             Diary Write
           </Typography>
@@ -130,6 +132,8 @@ function App() {
           return <DiaryEntryCard diaryEntry = {diaryEntry}/>
         })}
       </Container>
+
+      <Footer/>
  
 
     
