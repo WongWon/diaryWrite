@@ -1,4 +1,4 @@
-import { WhatsApp } from '@material-ui/icons';
+
 import React from 'react'
 import {FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon,  LineShareButton, LineIcon, WhatsappIcon, WhatsappShareButton} from 'react-share';
 

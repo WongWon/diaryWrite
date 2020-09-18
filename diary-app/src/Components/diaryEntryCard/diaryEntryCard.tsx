@@ -37,14 +37,11 @@ const useStyles = makeStyles({
 function DiaryEntryCard ({diaryEntry}) {
 
     const { speak,cancel } = useSpeechSynthesis();
-
+    
     const classes = useStyles();
     const [open, setOpen] = useState(false)
-    const [state, setState] = useState({diaryEntry})
     const [title, setTitle] = useState(diaryEntry.title)
     const [entry, setEntry] = useState(diaryEntry.entry)
-
-    console.log(title)
 
     const handleOpen = () => {
         setOpen(true);
@@ -55,13 +52,10 @@ function DiaryEntryCard ({diaryEntry}) {
     }
 
     const formSubmit = () => {
-        const titleElement = document.getElementById("title") as HTMLInputElement;
-        const entryElement = document.getElementById("entry") as HTMLInputElement;
-
         const body = {
             id: diaryEntry.id,
-            title: titleElement.value,
-            entry: entryElement.value
+            title: title,
+            entry: entry
         }
         console.log(body)
        
@@ -136,7 +130,7 @@ function DiaryEntryCard ({diaryEntry}) {
 
                         <TextField 
                         defaultValue={diaryEntry.entry}
-                        onChange={e =>setEntry( e.target.value)}
+                        onChange={e =>setEntry(e.target.value)}
 
                         id="entry"
                         margin="dense"
